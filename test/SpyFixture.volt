@@ -5,6 +5,8 @@ import vtest;
 class SpyFixture : TestFixture {
     this() {
         super("SpyFixture");
+        register("TheTest1", theTest1);
+        register("TheTest2", theTest2);
 
         m_Count = -1;
         m_SetupCalled = -1;
@@ -24,13 +26,11 @@ class SpyFixture : TestFixture {
     }
 
     fn theTest1() {
-        register("TheTest1", theTest1);
         ++m_Count;
         m_TestsCalled[0] = m_Count;
     }
 
     fn theTest2() {
-        register("TheTest2", theTest2);
         ++m_Count;
         m_TestsCalled[1] = m_Count;
     }
