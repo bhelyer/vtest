@@ -7,8 +7,15 @@ import vtest.IResultReporter;
 
 /**
  * Manages a set of TestFixtures to be run.
+ *
+ * How to use:
+ * - Construct this, passing the reporting method to use (currently only
+ * ConsoleResultReporter is provided).
+ * - Call addFixture for every fixture you want to test.
+ * - Call run.
  */
 class Runner {
+    /// Construct a Runner that uses the given reporting methods.
     this(IResultReporter reporter) {
         m_Reporter = reporter;
     }

@@ -4,6 +4,10 @@ import watt.io;
 
 import vtest.IResultReporter;
 
+/**
+ * A simple IResultReporter implementation that simply
+ * prints to stdout.
+ */
 class ConsoleResultReporter : IResultReporter {
     override fn startFixture(fixtureName: string) {
         writeln(fixtureName);
