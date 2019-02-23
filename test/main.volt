@@ -5,7 +5,7 @@ import vtest;
 import test.TestRunner;
 
 fn main() i32 {
-    runner := new Runner();
+    runner := new Runner(new ConsoleResultReporter());
     runner.addFixture(new TestRunner());
     runner.run();
     return 0;
