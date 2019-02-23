@@ -19,7 +19,7 @@ class TestRunner : TestFixture {
     }
 
     fn callOneFixture() {
-        Assert.IsTrue(m_SpyFixture.wasCorrectlyCalled());
+        Assert.isTrue(m_SpyFixture.wasCorrectlyCalled());
     }
 
     private m_Runner: Runner;

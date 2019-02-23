@@ -1,7 +1,7 @@
 /**
  * Provides functions for verifying that tests work.
  * Don't import this directly, just import vtest and call
- * the functions through 'Assert' e.g. 'Assert.IsTrue(blah)'
+ * the functions through 'Assert' e.g. 'Assert.isTrue(blah)'
  */
 module vtest.Assert;
 
@@ -22,6 +22,6 @@ private fn assertImpl(value: bool, message: string) {
     }
 }
 
-fn IsTrue(value: bool) {
-    assertImpl(value, "Assert.IsTrue expected 'true', got 'false'.");
+fn isTrue(value: bool) {
+    assertImpl(value, "Assert.isTrue expected 'true', got 'false'.");
 }
