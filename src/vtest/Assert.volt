@@ -25,3 +25,7 @@ private fn assertImpl(value: bool, message: string) {
 fn isTrue(value: bool) {
     assertImpl(value, "Assert.isTrue expected 'true', got 'false'.");
 }
+
+fn fail() {
+    assertImpl(false, "Assert.fail called.");
+}
