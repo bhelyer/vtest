@@ -29,7 +29,7 @@ class Runner {
     fn run() {
         foreach (fixture; m_Fixtures) {
             m_Reporter.startFixture(fixture.name());
-            tests: Test[] = fixture.registeredTests();
+            tests: Test[] = fixture.tests();
             foreach (test; tests) {
                 fixture.setup();
                 bool pass = true;

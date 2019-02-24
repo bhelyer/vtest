@@ -5,9 +5,9 @@ import vtest;
 class TestAssert : TestFixture {
     this() {
         super("TestAssert");
-        register("Assert.isTrue positive", testAssertIsTruePositive);
-        register("Assert.isTrue negative", testAssertIsTrueNegative);
-        register("Assert.fail", testAssertFail);
+        addTest("Assert.isTrue positive", testAssertIsTruePositive);
+        addTest("Assert.isTrue negative", testAssertIsTrueNegative);
+        addTest("Assert.fail", testAssertFail);
     }
 
     fn testAssertIsTruePositive() {

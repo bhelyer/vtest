@@ -31,7 +31,7 @@ class TestFixture {
     }
 
     /// Add a test to this fixture.
-    fn register(name: string, test: dg()) {
+    fn addTest(name: string, test: dg()) {
         t: Test;
         t.name = name;
         t.test = test;
@@ -39,7 +39,7 @@ class TestFixture {
     }
 
     /// Return every test registered to this fixture.
-    fn registeredTests() Test[] {
+    fn tests() Test[] {
         return m_Tests;
     }
 

@@ -8,7 +8,7 @@ import test.StubResultReporter;
 class TestRunner : TestFixture {
     this() {
         super("TestRunner");
-        register("call one fixture", callOneFixture);
+        addTest("call one fixture", callOneFixture);
     }
 
     override fn setup() {
