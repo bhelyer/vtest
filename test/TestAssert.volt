@@ -7,6 +7,8 @@ class TestAssert : TestFixture {
         super("TestAssert");
         addTest("Assert.isTrue positive", testAssertIsTruePositive);
         addTest("Assert.isTrue negative", testAssertIsTrueNegative);
+        addTest("Assert.isFalse positive", testAssertIsFalsePositive);
+        addTest("Assert.isFalse negative", testAssertIsFalseNegative);
         addTest("Assert.fail", testAssertFail);
     }
 
@@ -30,5 +32,18 @@ class TestAssert : TestFixture {
             return;
         }
         Assert.isTrue(false);
+    }
+
+    fn testAssertIsFalsePositive() {
+        Assert.isFalse(false);
+    }
+
+    fn testAssertIsFalseNegative() {
+        try {
+            Assert.isFalse(true);
+        } catch (Assert.TestException) {
+            return;
+        }
+        Assert.fail();
     }
 }

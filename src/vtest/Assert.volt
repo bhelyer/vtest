@@ -26,6 +26,10 @@ fn isTrue(value: bool) {
     assertImpl(value, "Assert.isTrue expected 'true', got 'false'.");
 }
 
+fn isFalse(value: bool) {
+    assertImpl(!value, "Assert.isFalse expected 'false', got 'true'.");
+}
+
 fn fail() {
     assertImpl(false, "Assert.fail called.");
 }
