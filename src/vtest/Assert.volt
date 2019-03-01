@@ -30,6 +30,10 @@ fn isFalse(value: bool) {
     assertImpl(!value, "Assert.isFalse expected 'false', got 'true'.");
 }
 
+fn areEqual(a: i32, b: i32) {
+    assertImpl(a == b, new "Assert.areEqual, '${a}' != '${b}'.");
+}
+
 fn fail() {
     assertImpl(false, "Assert.fail called.");
 }
